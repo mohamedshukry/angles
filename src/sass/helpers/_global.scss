@@ -1,0 +1,221 @@
+.primary-color{background-color: $primary-color}
+.secondary-color{background-color: $secondary-color}
+.primary-font-color{color:$primary-color}
+.secondary-font-color{color:$secondary-color}
+.color-white{color: white;}
+
+.align-items{
+    align-items:center;
+    display: flex;
+}
+.special{
+    color: $secondary-color;
+}
+.carousel-indicators{
+    display: none;
+}
+.line{
+    height: 2px;
+    background-color: $gray-dark;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgb(0 , 0, 0  , 0.8);
+    z-index: 0;
+    top: 0;
+}
+.title-color{
+    color: $secondary-color;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: $title-family;
+    font-weight: bold;
+}
+.media-object{
+    text-decoration: none;
+    display: block;
+    border-right: 1px solid rgba(246, 246, 246, 0.3);
+    .icon-container{
+        i{
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            line-height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            color: black;
+        }
+    }
+    .title-contat{
+        color: white;
+    }
+    p{
+        color: rgba(246, 246, 246, 0.3);
+        ;
+    }
+}
+.section-title{
+    margin-bottom: 70px;
+    text-transform: capitalize;
+    position: relative;
+    color: $title-color;
+    font: {
+    	size: 30px;
+    	weight: 600;
+        family:$title-family;
+    }
+}
+.section-para{
+    margin: 20px 0;
+    color: #888888;
+    font-size: 17px;
+}
+.close{
+	cursor: pointer;
+	&:focus{
+		outline:0;
+	}
+}
+.page-section{
+    padding: 80px 0;
+}
+button:focus{
+    outline: 0;
+}
+.bg{
+    background-color: #F3F5F9;
+}
+.facebook{background-color: $facebook;}
+.twitter{background-color: $twitter;}
+.whatsapp{background-color: $whatsapp;}
+.linkedin{background-color: $linkedin;}
+.instagram{background-color: #e4405f;}
+.facebook , .twitter , .whatsapp , .linkedin , .instagram{color: white;}
+ul.social{
+    .list-inline-item{
+        margin-bottom: 7px;
+        a{
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 50%;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-right: 5px;
+            text-transform: uppercase;
+        }
+        &:not(:last-child){
+            margin-right: 0;
+        }
+    }
+}
+.banner{
+    height: 250px;
+    position: relative;
+    .img-container{
+        height: 100%;
+        img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            overflow: hidden;
+            height: 250px;
+        }
+    }
+    .overlay{
+        background-color: rgba(0, 0, 0, 0.5);
+        .overlaytext{
+            height: 50%;
+            margin-top: 12%;
+            text-align: center;
+            vertical-align: middle;
+            .title{
+                color: white;
+                font-weight: 700;
+            }
+            a , span{
+                color: white;
+                font-size: 16px;
+                text-decoration: none;
+            }
+        }
+    }
+
+}
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    color: white;
+ }
+ .list-color{
+    li{
+        color: #616161;
+    }
+ }
+ .text-man{
+     color: #616161;
+     font-size: 12px;
+     font-family: $font-family;
+ }
+#content{
+    background-color: $primary-color;
+    h1{
+        color: white;
+        font-size: 12px;
+        padding-right: 15px;
+    }
+} 
+.gm-style .gm-style-iw-c{
+        background-color: $primary-color;
+        padding-right: 0px; 
+        padding-bottom: 0px; 
+        max-width: none; 
+        max-height: none; 
+        min-width: auto;
+        padding: 15px;
+        border-radius: 0;
+}
+.gm-style-iw-d{
+    overflow: hidden !important;
+}
+.gm-style .gm-style-iw-t::after{
+    background-color: linear-gradient(45deg,$primary-color 50%,$primary-color 51%, $primary-color 100%);
+    display: none;
+}
+.gm-ui-hover-effect{
+    img{
+        display: none !important;
+    }
+}
+
+
+@media (min-width: $screen-lg-min) {
+
+.banner{
+    height: 350px;
+    position: relative;
+    .img-container{
+        height: 100%;
+        img{
+           height: 350px; 
+        }
+    }
+    .overlay{
+        .overlaytext{
+            margin-top:8%;
+          
+        }
+    }
+
+}
+}

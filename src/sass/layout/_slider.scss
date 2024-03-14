@@ -1,0 +1,241 @@
+.main-slider{
+    .carousel-inner{
+        .carousel-item{
+            position: relative;
+            // height: 250px !important;
+            img{
+              width: 100%;
+              object-fit: cover;
+              object-position: center;
+              height: 50vh !important;
+              overflow: hidden;
+            }
+            .carousel-caption{
+              bottom: 10%;
+              .smal{
+                font-size: 12px;
+              }
+              .title{
+                font-size: 16px;
+                font-weight: 700;
+                margin: 10px  0 20px 0 ;
+              }
+            }
+        }
+        
+    }
+    .carousel-control-prev , .carousel-control-next{
+      display: none !important;
+    }
+    &:hover{
+      .carousel-control-prev , .carousel-control-next{
+        display: block !important;
+      }
+    }
+}
+
+.carousel-control-prev-icon , .carousel-control-next-icon{
+  font-size: 10px;
+  background: none;
+}
+.carousel-control-prev-icon{
+  rotate: 180deg;
+}
+.carousel-control-prev-icon , .carousel-control-next-icon  i{
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  &:hover{
+    background-color: white;
+    color: black;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.owl-theme .owl-nav{
+  margin-top: 0;
+  display: none
+}
+
+.slider .owl-item.active .overlay .slide_inner {
+  .slide-desc{
+    @include prefixer(animation-name , fadeInRight , webkit moz o ms);
+    animation:{
+      name: fadeInRight;
+      delay: .5s;
+      duration: 1s;
+      fill-mode: both;
+    }
+  }
+  .slide-header{
+    @include prefixer(animation , bounceInLeft 0.5s ease-in 400ms both , webkit moz o ms);
+  }
+  .main-btn{
+    @include prefixer(animation , fadeIn 4.5s ease-in 200ms both , webkit moz o ms);
+  }
+}
+.slider:hover .owl-nav div{
+  left: 10px;
+  background-color: rgba(0,0,0,.1);
+  &.owl-next {
+    left: auto;
+    right: 20px;
+  }
+}
+.slider .owl-theme .owl-nav [class*="owl-"] {
+  background: rgba(0,0,0,0.3);
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+}
+.owl-theme .owl-nav [class*=owl-]:hover{
+  background-color: rgba($secondary-color,.6);
+}
+.slider.owl-theme .owl-nav .disabled{
+  opacity: 1;
+}
+.slider.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: #89d700 none repeat scroll 0 0;
+}
+
+ /* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-md-min) { 
+  .main-slider{
+    .carousel-inner{
+        .carousel-item{
+            position: relative;
+            // height: 100% !important;
+            img{
+              height: 80vh !important;
+            }
+            .carousel-caption{
+              bottom: 7%;
+              .smal{
+                font-size: 12px;
+              }
+              .title{
+                font-size: 35px;
+                font-weight: 900;
+              }
+            }
+        }
+        
+    }
+}
+
+.carousel-control-prev-icon , .carousel-control-next-icon  i{
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  
+}
+
+  
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-lg-min) { 
+
+  .main-slider{
+    .carousel-inner{
+        .carousel-item{
+            
+            img{
+            }
+            .carousel-caption{
+              bottom: 20%;
+              .smal{
+                font-size: 16px;
+              }
+              .title{
+                font-size: 50px;
+                font-weight: 900;
+              }
+            }
+        }
+        
+    }
+}
+
+
+
+  .slider {
+    .owl-nav div{
+      width: 65px;
+      height: 65px;
+      line-height: 65px;
+    }
+    .owl-item{
+      height: 560px;
+      .overlay{
+        .slide_inner{
+          .slide-header{
+              line-height: 72px;
+              font:{
+                size: 72px;
+              }
+          }
+          .slide-desc{
+              line-height: 1.2;
+              margin:50px 10%;
+              font:{
+                size:22px;
+              }
+          }
+        }
+      }
+    }
+  }
+}
+.owl-carousel.owl-rtl .owl-item{
+  width: 100%;
+}
+@include keyframes(kenburns_zoomInOut){
+  0%{
+    @include prefixer( transform , scale(1) , webkit moz o ms);
+  }
+  100%{
+    @include prefixer( transform , scale(1.2) , webkit moz o ms);
+  }
+}
+
+
+@media (min-width: $screen-xl-min) {
+  .main-slider{
+    .carousel-inner{
+        .carousel-item{
+            
+            img{
+            }
+            .carousel-caption{
+              
+              bottom: 20%;
+              .smal{
+                font-size: 16px;
+              }
+              .title{
+                font-size: 65px;
+                font-weight: 900;
+                margin: 3% 0;
+              }
+            }
+        }
+        
+    }
+}
+
+ }
