@@ -43,3 +43,13 @@ a.temp-btn{
         color: #fff;
     }
 }
+.temp-btn{
+    background-color: #fff ;
+    color: #000;
+    width: 200px;
+    height: 45px;
+    &:hover{
+        background-color: $secondary-color ;
+        color: #fff;
+    }
+}

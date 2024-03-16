@@ -1,4 +1,4 @@
-const images = [...document.querySelectorAll('.image')];
+const images = [...document.querySelectorAll('.overlay')];
 
 // popup
 
@@ -20,7 +20,7 @@ popup.classList.toggle('active');
 });
 
 const updateImage = i => {
-let path = `https://github.com/kunaal438/image-popup/blob/master/img/img${i + 1}.png?raw=true`;
+let path = `../dest/img/gallary/g${i + 1}.png?raw=true`;
 largeImage.src = path;
 imageName.innerHTML = path;
 imageIndex.innerHTML = `0${i + 1}`;

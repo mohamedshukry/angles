@@ -18,17 +18,8 @@
         color: #616161;
     }
 }
-
-.form-inner{
-    margin-top: 50px;
-    .main-btn{
-        margin-top: 50px;
-    }
-}
-
-.form-control{
+select.minimal {
     border:none;
-    border-bottom: 1px solid #d0cdcd !important;
     resize: none;
     border-radius: 0;
     padding-left: 0;
@@ -37,10 +28,129 @@
     font-size: 14px;
     padding-bottom: 5px;
     margin-bottom: 30px;
+    padding-left: 20px;
+    color: white;
+    height: 45px;
+    background-color: rgba(246, 246, 246, 0.05);
+    background-image:
+      linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    option{
+        background: rgba(246, 246, 246, 0.05);
+        &:hover{
+            background: rgba(246, 246, 246, 0.08);
+        }
+    }
+  }
+  
+  select.minimal:focus {
+    border: none;
+    box-shadow: none !important;
+    background-image:
+      linear-gradient(45deg, #ccc 50%, transparent 50%),
+      linear-gradient(135deg, transparent 50%, #ccc 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+    outline: 0;
+  }
+.contact{
+    .services{
+        padding-bottom: 100px;
+        .form-item{
+            label{
+                color: white;
+                margin: 20px 0;
+                font-size: 20px;
+                font-weight: 600;
+                display: inline-block;
+                text-transform: capitalize;
+            }
+            .required{
+                color: $secondary-color;
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            // .form-select{
+            //     height: 45px;
+            // }
+            textarea{
+                width: 100%;
+                background: rgba(246, 246, 246, 0.05);
+                padding-left: 20px;
+                border: none;
+                color: white;
+                margin-bottom: 30px;
+                &:focus{
+                    background: rgba(246, 246, 246, 0.05);
+                    outline: none;
+                    box-shadow:none;
+                }
+                &::placeholder{
+                    color: rgba(246, 246, 246, 0.3);
+                    font-weight: 600;
+                }
+            }
+            i{
+                rotate: -45deg;
+                display: inline-block;
+                margin-left: 5px;
+            }
+        }
+    }
+}
+.form-inner{
+    margin-top: 50px;
+    .main-btn{
+        margin-top: 50px;
+    }
+}
+
+
+
+.form-control{
+    border:none;
+    // border-bottom: 1px solid #d0cdcd !important;
+    resize: none;
+    border-radius: 0;
+    padding-left: 0;
+    text-transform: capitalize;
+    color: #616161;
+    font-size: 14px;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    background: rgba(246, 246, 246, 0.05);
+    padding-left: 20px;
+    color: white;
+    height: 45px;
 	&:focus{
-            // border-color: $secondary-color;
-            border: none;
+        background: rgba(246, 246, 246, 0.05);
+        border-color: $secondary-color;
+        outline: none;
+        box-shadow:none;
 	}
+    &::placeholder{
+        color: rgba(246, 246, 246, 0.3);
+        font-weight: 600;
+    }
 }
 .form-comment{
 	.form-control{
@@ -53,5 +163,5 @@
     }
 }
 .contact{
-	padding: 70px 0;
+	// padding: 70px 0;
 }

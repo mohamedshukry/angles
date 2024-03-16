@@ -371,6 +371,17 @@ a.temp-btn:hover {
   color: #fff;
 }
 
+.temp-btn {
+  background-color: #fff;
+  color: #000;
+  width: 200px;
+  height: 45px;
+}
+.temp-btn:hover {
+  background-color: #198f51;
+  color: #fff;
+}
+
 .scrollup {
   width: 45px;
   height: 85px;
@@ -431,6 +442,82 @@ a.temp-btn:hover {
   color: #616161;
 }
 
+select.minimal {
+  border: none;
+  resize: none;
+  border-radius: 0;
+  padding-left: 0;
+  text-transform: capitalize;
+  color: #616161;
+  font-size: 14px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  color: white;
+  height: 45px;
+  background-color: rgba(246, 246, 246, 0.05);
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+select.minimal option {
+  background: rgba(246, 246, 246, 0.05);
+}
+select.minimal option:hover {
+  background: rgba(246, 246, 246, 0.08);
+}
+
+select.minimal:focus {
+  border: none;
+  box-shadow: none !important;
+  background-image: linear-gradient(45deg, #ccc 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #ccc 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  outline: 0;
+}
+
+.contact .services {
+  padding-bottom: 100px;
+}
+.contact .services .form-item label {
+  color: white;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 600;
+  display: inline-block;
+  text-transform: capitalize;
+}
+.contact .services .form-item .required {
+  color: #198f51;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+}
+.contact .services .form-item textarea {
+  width: 100%;
+  background: rgba(246, 246, 246, 0.05);
+  padding-left: 20px;
+  border: none;
+  color: white;
+  margin-bottom: 30px;
+}
+.contact .services .form-item textarea:focus {
+  background: rgba(246, 246, 246, 0.05);
+  outline: none;
+  box-shadow: none;
+}
+.contact .services .form-item textarea::placeholder {
+  color: rgba(246, 246, 246, 0.3);
+  font-weight: 600;
+}
+.contact .services .form-item i {
+  rotate: -45deg;
+  display: inline-block;
+  margin-left: 5px;
+}
+
 .form-inner {
   margin-top: 50px;
 }
@@ -440,7 +527,6 @@ a.temp-btn:hover {
 
 .form-control {
   border: none;
-  border-bottom: 1px solid #d0cdcd !important;
   resize: none;
   border-radius: 0;
   padding-left: 0;
@@ -449,9 +535,20 @@ a.temp-btn:hover {
   font-size: 14px;
   padding-bottom: 5px;
   margin-bottom: 30px;
+  background: rgba(246, 246, 246, 0.05);
+  padding-left: 20px;
+  color: white;
+  height: 45px;
 }
 .form-control:focus {
-  border: none;
+  background: rgba(246, 246, 246, 0.05);
+  border-color: #198f51;
+  outline: none;
+  box-shadow: none;
+}
+.form-control::placeholder {
+  color: rgba(246, 246, 246, 0.3);
+  font-weight: 600;
 }
 
 .form-comment .form-control {
@@ -461,10 +558,6 @@ a.temp-btn:hover {
 }
 .form-comment .form-control:focus {
   border: none;
-}
-
-.contact {
-  padding: 70px 0;
 }
 
 .pagination {
@@ -1147,7 +1240,7 @@ a.temp-btn:hover {
     font-size: 16px;
   }
   .main-slider .carousel-inner .carousel-item .carousel-caption .title {
-    font-size: 65px;
+    font-size: 60px;
     font-weight: 900;
     margin: 3% 0;
   }
@@ -1323,7 +1416,7 @@ a.temp-btn:hover {
 /* popup */
 .popup {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   width: 80%;
@@ -1418,6 +1511,7 @@ a.temp-btn:hover {
   font-weight: 100;
   color: rgba(255, 255, 255, 0.4);
   opacity: 0;
+  display: none;
 }
 
 .large-image {
