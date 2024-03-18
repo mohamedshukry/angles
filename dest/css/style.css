@@ -443,6 +443,7 @@ a.temp-btn:hover {
 }
 
 select.minimal {
+  width: 100%;
   border: none;
   resize: none;
   border-radius: 0;
@@ -462,7 +463,8 @@ select.minimal {
   background-repeat: no-repeat;
 }
 select.minimal option {
-  background: rgba(246, 246, 246, 0.05);
+  background: rgba(246, 246, 246, 0.05) !important;
+  color: black;
 }
 select.minimal option:hover {
   background: rgba(246, 246, 246, 0.08);
@@ -634,6 +636,16 @@ select.minimal:focus {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   opacity: 0.8;
 }
+.header .dropdown-toggle {
+  color: white;
+  border: 1px solid #3F3F3F;
+  padding: 10px 20px;
+}
+.header .dropdown-item img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
 .header .navbar {
   padding: 0;
 }
@@ -700,6 +712,11 @@ select.minimal:focus {
     margin-left: 10px;
   }
 }
+.line-white {
+  height: 20px;
+  background-color: white;
+}
+
 .footer {
   position: relative;
   overflow: hidden;
@@ -708,7 +725,6 @@ select.minimal:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  border-bottom: 1px solid #4a4646;
 }
 .footer .footer-content .temp-btn {
   margin: auto;
@@ -732,9 +748,10 @@ select.minimal:focus {
 }
 .footer .footer-widget .footer-column .logo {
   margin-bottom: 15px;
+  width: 300px;
 }
 .footer .footer-widget .footer-column .text {
-  color: #c8c8c8;
+  color: rgba(246, 246, 246, 0.5);
   font-size: 16px;
   line-height: 1.6em;
   margin-bottom: 20px;
@@ -773,7 +790,7 @@ select.minimal:focus {
   margin-bottom: 20px;
 }
 .footer .footer-widget .footer-column .links .link a {
-  color: #c8c8c8;
+  color: rgba(246, 246, 246, 0.5);
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
@@ -803,7 +820,7 @@ select.minimal:focus {
 .footer .footer-bottom {
   padding: 14px 0px;
   border-top: 1px solid #4a4646;
-  color: #c8c8c8;
+  color: rgba(246, 246, 246, 0.5);
   font-size: 16px;
 }
 .footer .footer-bottom a.brand {
@@ -811,7 +828,7 @@ select.minimal:focus {
   font-weight: 600;
 }
 .footer .footer-bottom ul .list-inline-item a {
-  color: #c8c8c8;
+  color: rgba(246, 246, 246, 0.5);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -1245,6 +1262,11 @@ select.minimal:focus {
     margin: 3% 0;
   }
 }
+.bg-page {
+  background-color: #000;
+  padding-bottom: 50px;
+}
+
 .partners {
   padding: 20px 0;
   background-color: #292b2c;
@@ -1338,8 +1360,9 @@ select.minimal:focus {
   height: 67px;
   line-height: 65px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid transparent;
   transform: translateX(-1px);
+  animation: 1s ease 1s pulse infinite;
 }
 .services .services-item .services-inner .circle i {
   display: inline-block;
@@ -1352,7 +1375,18 @@ select.minimal:focus {
   rotate: -45deg;
 }
 
+@keyframes pulse {
+  0% {
+    border: none;
+  }
+  100% {
+    border: 1px solid white;
+  }
+}
 @media (min-width: 768px) {
+  .bg-page {
+    padding: 0 20px 50px 20px;
+  }
   .prand .title {
     margin: 50px 0;
     font-size: 55px;

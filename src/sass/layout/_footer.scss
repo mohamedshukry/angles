@@ -1,13 +1,15 @@
+.line-white{
+	height: 20px;
+	background-color: white;
+}
 .footer{
-	$footer-bottom:#c8c8c8;
+	$footer-bottom: rgba(#F6F6F6 , 0.5);
 	position: relative;
 	overflow: hidden;
-	
 	.footer-content{
 		padding: 100px 0;
 		text-align: center;
 		color: white;
-		border-bottom: 1px solid #4a4646;
 		.temp-btn{
 			margin: auto;
 			margin-top: 50px;
@@ -31,6 +33,7 @@
 		.footer-column{
 			.logo{
 				margin-bottom: 15px;
+				width: 300px;
 			}
 			.text{
 			    color: $footer-bottom;

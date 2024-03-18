@@ -19,6 +19,7 @@
     }
 }
 select.minimal {
+    width: 100%;
     border:none;
     resize: none;
     border-radius: 0;
@@ -46,7 +47,8 @@ select.minimal {
       1px 1.5em;
     background-repeat: no-repeat;
     option{
-        background: rgba(246, 246, 246, 0.05);
+        background: rgba(246, 246, 246, 0.05) !important;
+        color: black;
         &:hover{
             background: rgba(246, 246, 246, 0.08);
         }
@@ -71,6 +73,7 @@ select.minimal {
     background-repeat: no-repeat;
     outline: 0;
   }
+  
 .contact{
     .services{
         padding-bottom: 100px;
